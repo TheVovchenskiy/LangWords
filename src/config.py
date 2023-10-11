@@ -1,1 +1,1 @@
-FILE_NAME = "korean_words.json"
+WORDS_FILE_PATH = ".\src\words.csv"

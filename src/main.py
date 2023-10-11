@@ -1,5 +1,5 @@
 import json
-from config import FILE_NAME
+# from config import FILE_NAME
 from words_handler import WordsHandler
 
 
