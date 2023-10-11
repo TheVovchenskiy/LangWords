@@ -4,13 +4,9 @@ import random
 import pandas as pd
 
 
-class WordTranslation:
-    def __init__(self, korean: str, russian: str) -> None:
-        self.korean = korean
-        self.russian = russian
-
-    def __str__(self) -> str:
-        return f"korean: {self.korean}\nrussian: {self.russian}"
+class LANGUAGES:
+    RUS = "Russian"
+    KOR = "Korean"
 
 
 class WordsHandler:
@@ -33,8 +29,8 @@ class WordsHandler:
 
         print("Слова на русском:".upper())
         for word in words:
-            print(*word['Russian'].values)
-        
+            print(*word[LANGUAGES.RUS].values)
+
         print()
         print("Чтобы продолжить нажмите 'enter'...")
         input()
@@ -42,4 +38,8 @@ class WordsHandler:
         print("Перевод:".upper())
         # print()
         for word in words:
-            print(*word['Russian'].values, *word['Korean'].values, sep=" - ")
+            print(
+                *word[LANGUAGES.RUS].values,
+                *word[LANGUAGES.KOR].values,
+                sep=" - "
+            )
